@@ -1,6 +1,5 @@
 FROM golang:1.18.2
 
-RUN apt-get -y update
 RUN groupadd -r my_safe_user && useradd -r -g my_safe_user my_safe_user
 
 # Set maintainer label: maintainer=[YOUR-EMAIL]
