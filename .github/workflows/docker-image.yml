@@ -22,8 +22,7 @@ jobs:
       
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        env:
-          GIT_SHA="$(git rev-parse --short HEAD)"
+        GIT_SHA="$(git rev-parse --short HEAD)"
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: |
