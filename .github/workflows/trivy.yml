@@ -72,6 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     # only run if security job didn't fail
     if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
+    needs: [security_check] 
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
