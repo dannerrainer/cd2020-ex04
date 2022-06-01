@@ -21,7 +21,6 @@ RUN go build -o /usr/myapp
 #Expose port 8888
 EXPOSE 8888
 
-USER my_safe_user
 
 # Run the service myapp when a container of this image is launched
 CMD ["/usr/myapp"]
